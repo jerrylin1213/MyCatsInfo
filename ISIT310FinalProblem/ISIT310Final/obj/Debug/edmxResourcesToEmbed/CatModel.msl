@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CatModelStoreContainer" CdmEntityContainer="CatModelContainer">
+    <EntitySetMapping Name="Cats">
+      <EntityTypeMapping TypeName="IsTypeOf(CatModel.Cat)">
+        <MappingFragment StoreEntitySet="Cats">
+          <ScalarProperty Name="CatID" ColumnName="CatID" />
+          <ScalarProperty Name="Breed" ColumnName="Breed" />
+          <ScalarProperty Name="PlayfullnessID" ColumnName="PlayfullnessID" />
+          <ScalarProperty Name="ActivityLevelID" ColumnName="ActivityLevelID" />
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="PlayfullnessPlayfullnessID" ColumnName="PlayfullnessPlayfullnessID" />
+          <ScalarProperty Name="ColorColorID" ColumnName="ColorColorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ActivityLevels">
+      <EntityTypeMapping TypeName="IsTypeOf(CatModel.ActivityLevel)">
+        <MappingFragment StoreEntitySet="ActivityLevels">
+          <ScalarProperty Name="ActivityLevelID" ColumnName="ActivityLevelID" />
+          <ScalarProperty Name="ActivityLevelValue" ColumnName="ActivityLevelValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Playfullnesses">
+      <EntityTypeMapping TypeName="IsTypeOf(CatModel.Playfullness)">
+        <MappingFragment StoreEntitySet="Playfullnesses">
+          <ScalarProperty Name="PlayfullnessID" ColumnName="PlayfullnessID" />
+          <ScalarProperty Name="PlayfullnessValue" ColumnName="PlayfullnessValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="IsTypeOf(CatModel.Color)">
+        <MappingFragment StoreEntitySet="Colors">
+          <ScalarProperty Name="ColorID" ColumnName="ColorID" />
+          <ScalarProperty Name="ColorValue" ColumnName="ColorValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="CatActivityLevel" TypeName="CatModel.CatActivityLevel" StoreEntitySet="Cats">
+      <EndProperty Name="ActivityLevel">
+        <ScalarProperty Name="ActivityLevelID" ColumnName="ActivityLevel_ActivityLevelID" />
+      </EndProperty>
+      <EndProperty Name="Cat">
+        <ScalarProperty Name="CatID" ColumnName="CatID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

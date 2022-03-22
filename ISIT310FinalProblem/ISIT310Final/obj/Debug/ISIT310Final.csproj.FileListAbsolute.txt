@@ -1,0 +1,15 @@
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\bin\Debug\ISIT310Final.exe.config
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\bin\Debug\ISIT310Final.exe
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\bin\Debug\ISIT310Final.pdb
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\bin\Debug\EntityFramework.dll
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\bin\Debug\EntityFramework.xml
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\obj\Debug\ISIT310Final.csproj.AssemblyReference.cache
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\obj\Debug\ISIT310Final.Form1.resources
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\obj\Debug\ISIT310Final.Properties.Resources.resources
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\obj\Debug\ISIT310Final.csproj.GenerateResource.cache
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\obj\Debug\ISIT310Final.csproj.CoreCompileInputs.cache
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\obj\Debug\ISIT310Final.csproj.CopyComplete
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\obj\Debug\ISIT310Final.exe
+C:\Users\JerryLin\Desktop\ISIT310FinalProblem\ISIT310FinalProblem\ISIT310Final\obj\Debug\ISIT310Final.pdb

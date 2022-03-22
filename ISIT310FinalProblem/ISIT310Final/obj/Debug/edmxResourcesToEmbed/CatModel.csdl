@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="CatModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="CatModelContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cats" EntityType="CatModel.Cat" />
+    <EntitySet Name="ActivityLevels" EntityType="CatModel.ActivityLevel" />
+    <EntitySet Name="Playfullnesses" EntityType="CatModel.Playfullness" />
+    <EntitySet Name="Colors" EntityType="CatModel.Color" />
+    <AssociationSet Name="CatActivityLevel" Association="CatModel.CatActivityLevel">
+      <End Role="Cat" EntitySet="Cats" />
+      <End Role="ActivityLevel" EntitySet="ActivityLevels" />
+    </AssociationSet>
+    <AssociationSet Name="PlayfullnessCat" Association="CatModel.PlayfullnessCat">
+      <End Role="Playfullness" EntitySet="Playfullnesses" />
+      <End Role="Cat" EntitySet="Cats" />
+    </AssociationSet>
+    <AssociationSet Name="ColorCat" Association="CatModel.ColorCat">
+      <End Role="Color" EntitySet="Colors" />
+      <End Role="Cat" EntitySet="Cats" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cat">
+    <Key>
+      <PropertyRef Name="CatID" />
+    </Key>
+    <Property Name="CatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Breed" Type="String" Nullable="false" />
+    <Property Name="PlayfullnessID" Type="Int32" Nullable="false" />
+    <Property Name="ActivityLevelID" Type="Int32" Nullable="false" />
+    <Property Name="ColorID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ActivityLevel" Relationship="CatModel.CatActivityLevel" FromRole="Cat" ToRole="ActivityLevel" />
+    <NavigationProperty Name="Playfullness" Relationship="CatModel.PlayfullnessCat" FromRole="Cat" ToRole="Playfullness" />
+    <Property Name="PlayfullnessPlayfullnessID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Color" Relationship="CatModel.ColorCat" FromRole="Cat" ToRole="Color" />
+    <Property Name="ColorColorID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ActivityLevel">
+    <Key>
+      <PropertyRef Name="ActivityLevelID" />
+    </Key>
+    <Property Name="ActivityLevelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivityLevelValue" Type="String" Nullable="false" />
+    <NavigationProperty Name="Cats" Relationship="CatModel.CatActivityLevel" FromRole="ActivityLevel" ToRole="Cat" />
+  </EntityType>
+  <EntityType Name="Playfullness">
+    <Key>
+      <PropertyRef Name="PlayfullnessID" />
+    </Key>
+    <Property Name="PlayfullnessID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlayfullnessValue" Type="String" Nullable="false" />
+    <NavigationProperty Name="Cats" Relationship="CatModel.PlayfullnessCat" FromRole="Playfullness" ToRole="Cat" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="ColorID" />
+    </Key>
+    <Property Name="ColorID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ColorValue" Type="String" Nullable="false" />
+    <NavigationProperty Name="Cats" Relationship="CatModel.ColorCat" FromRole="Color" ToRole="Cat" />
+  </EntityType>
+  <Association Name="CatActivityLevel">
+    <End Type="CatModel.Cat" Role="Cat" Multiplicity="*" />
+    <End Type="CatModel.ActivityLevel" Role="ActivityLevel" Multiplicity="1" />
+  </Association>
+  <Association Name="PlayfullnessCat">
+    <End Type="CatModel.Playfullness" Role="Playfullness" Multiplicity="1" />
+    <End Type="CatModel.Cat" Role="Cat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Playfullness">
+        <PropertyRef Name="PlayfullnessID" />
+      </Principal>
+      <Dependent Role="Cat">
+        <PropertyRef Name="PlayfullnessPlayfullnessID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ColorCat">
+    <End Type="CatModel.Color" Role="Color" Multiplicity="1" />
+    <End Type="CatModel.Cat" Role="Cat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Color">
+        <PropertyRef Name="ColorID" />
+      </Principal>
+      <Dependent Role="Cat">
+        <PropertyRef Name="ColorColorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
